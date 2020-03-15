@@ -52,6 +52,10 @@ filetype plugin indent on    " required
 "==================="
 let g:gitgutter_enabled = 1
 
+" Use the Solarized Dark theme
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termtrans=1
 
 "====================="
 "=== Customization ==="
@@ -111,6 +115,9 @@ set smartcase
 " Enable searching as you type, rather than waiting till you press enter.
 set incsearch
 
+" Highlight search
+set hlsearch
+
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
@@ -137,3 +144,5 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
+" Make tabs as wide as two spaces
+set tabstop=2
