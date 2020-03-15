@@ -145,4 +145,6 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Make tabs as wide as two spaces
+set shiftwidth=0
 set tabstop=2
+
