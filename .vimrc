@@ -28,9 +28,14 @@ Plugin 'prettier/vim-prettier'
 Plugin 'godlygeek/tabular'
 
 Plugin 'scrooloose/syntastic'
+Plugin 'pangloss/vim-javascript'
+Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'hdima/python-syntax'
+
 Plugin 'vim-airline/vim-airline'
 "Plugin 'nathanaelkane/vim-indent-guides'"
-Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'mhartington/oceanic-next'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,12 +55,17 @@ filetype plugin indent on    " required
 "==================="
 "=== Plugin Code ==="
 "==================="
+" Git-gutter
 let g:gitgutter_enabled = 1
 
-" Use the Solarized Dark theme
-"set background=dark
-"colorscheme solarized
-"let g:solarized_termtrans=1
+" Oceanic-next 
+" for vim 7
+ set t_Co=256
+" for vim 8
+if (has("termguicolors"))
+  set termguicolors
+endif
+colorscheme OceanicNext
 
 "====================="
 "=== Customization ==="
