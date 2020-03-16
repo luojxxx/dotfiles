@@ -4,7 +4,7 @@
 # Command to download and execute bootstrap.sh script
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/luojxxx/dotfiles/master/bootstrap.sh)"
 
-PACKAGES="gcc git tmux tldr tree nnn ripgrep fzf ack rsync htop python3 pipenv node yarn"
+PACKAGES="gcc git tmux tldr tree nnn ripgrep fzf ack rsync htop python3 pipenv node yarn prettier eslint yapf"
 IFS=' ' read -r -a pkgs <<< "$PACKAGES"
 
 # Install homebrew
@@ -44,3 +44,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Install Tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Post installation you'll need to run prefix+I to install the plugin or prefix+alt+u to remove plugin
+
+# Create vim ftplugin folder and add files
+mkdir ~/.vim/ftplugin
+echo "let b:ale_fixers = ['prettier', 'eslint']" > ~/.vim/ftplugin/javascript.vim
+echo "let b:ale_fixers = ['yapf']" > ~/.vim/ftplugin/python.vim

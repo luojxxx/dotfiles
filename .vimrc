@@ -23,14 +23,14 @@ Plugin 'mileszs/ack.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
-"Plugin 'valloric/youcompleteme'"
-Plugin 'prettier/vim-prettier'
 Plugin 'godlygeek/tabular'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'pangloss/vim-javascript'
-Plugin 'MaxMEllon/vim-jsx-pretty'
-Plugin 'hdima/python-syntax'
+Plugin 'dense-analysis/ale'
+
+"Plugin 'scrooloose/syntastic'"
+"Plugin 'pangloss/vim-javascript'"
+"Plugin 'MaxMEllon/vim-jsx-pretty'"
+"Plugin 'hdima/python-syntax'"
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
