@@ -34,7 +34,7 @@ git clone https://github.com/luojxxx/dotfiles.git ~/.dotfiles
 
 # Setup symlinks
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
-ln -s ~/.dotfiles/.vimrc ~/.vimcrc
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 # Install Vundle package manager for Vim packages
