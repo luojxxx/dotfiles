@@ -4,28 +4,29 @@
 # Command to download and execute bootstrap.sh script
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/luojxxx/dotfiles/master/bootstrap.sh)"
 
-PACKAGES="gcc git tmux tree nnn broot ripgrep fzf ack rsync htop node yarn python pipenv"
-IFS=' ' read -r -a package_array <<< "$PACKAGES"
+PACKAGES="gcc git tmux tldr tree nnn ripgrep fzf ack rsync htop python3 pipenv node yarn"
+IFS=' ' read -r -a pkgs <<< "$PACKAGES"
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
 
 # If MacOS
 if [ "$(uname)" == "Darwin" ]; then
-	# Install homebrew
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
-
-	# Install formulae
-	for pkg in "${package_array[@]}"
-	do
-		brew install "$pkg"
-	done
+  echo "MacOS nothing special"
 
 # If Linux
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-	# Install packages
-	for pkg in "${package_array[@]}"
-	do
-		sudo apt install "$pkg"
-	done
+	test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+	test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+	test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+	echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 fi
+
+# Install packages
+for pkg in "${pkgs[@]}"
+do
+	brew install "$pkg"	
+done
 
 # Common installation steps
 # Clone repo with dotfiles
