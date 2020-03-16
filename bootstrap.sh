@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-
 # Setup command line environment and tools
+
+# Command to download and execute bootstrap.sh script
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/luojxxx/dotfiles/master/bootstrap.sh)"
 
 PACKAGES="gcc git tmux tree nnn broot ripgrep fzf ack"
 IFS=' ' read -r -a package_array <<< "$PACKAGES"
