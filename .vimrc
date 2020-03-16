@@ -21,16 +21,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 
 Plugin 'easymotion/vim-easymotion'
+"Plugin 'ycm-core/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 
 Plugin 'dense-analysis/ale'
-
-"Plugin 'scrooloose/syntastic'"
-"Plugin 'pangloss/vim-javascript'"
-"Plugin 'MaxMEllon/vim-jsx-pretty'"
-"Plugin 'hdima/python-syntax'"
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -161,7 +157,9 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-" Make tabs as wide as two spaces
-set shiftwidth=0
+" Make pressing tab add spaces, set tabs as wide as two spaces, and indent
+" with 2 spaces
+set expandtab
+set shiftwidth=2
 set tabstop=2
 
