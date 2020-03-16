@@ -33,7 +33,7 @@ Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'hdima/python-syntax'
 
 Plugin 'vim-airline/vim-airline'
-"Plugin 'nathanaelkane/vim-indent-guides'"
+Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'mhartington/oceanic-next'
 
@@ -57,6 +57,12 @@ filetype plugin indent on    " required
 "==================="
 " Git-gutter
 let g:gitgutter_enabled = 1
+
+" Vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=grey     ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black    ctermbg=235
 
 " Oceanic-next 
 " for vim 7
