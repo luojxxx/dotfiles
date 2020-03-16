@@ -26,6 +26,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 fi
 
 # Common installation steps
+# Clone repo with dotfiles
+git clone https://github.com/luojxxx/dotfiles.git ~/.dotfiles
+
 # Setup symlinks
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
 ln -s ~/.dotfiles/.vimrc ~/.vimcrc
