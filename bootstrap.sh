@@ -4,7 +4,7 @@
 # Command to download and execute bootstrap.sh script
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/luojxxx/dotfiles/master/bootstrap.sh)"
 
-PACKAGES="gcc git tmux tree nnn broot ripgrep fzf ack"
+PACKAGES="gcc git tmux tree nnn broot ripgrep fzf ack rsync htop node yarn python pipenv"
 IFS=' ' read -r -a package_array <<< "$PACKAGES"
 
 # If MacOS
@@ -38,4 +38,8 @@ ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 # Install Vundle package manager for Vim packages
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Post installation you'll need to run :PluginInstall within vim or :PluginClean to remove plugins
 
+# Install Tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# Post installation you'll need to run prefix+I to install the plugin or prefix+alt+u to remove plugin
