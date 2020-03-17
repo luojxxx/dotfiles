@@ -38,6 +38,10 @@ ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/.eslintrc.json ~/.eslintrc.json
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
+
+# Setup .gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 
 # Install Vundle package manager for Vim packages
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
