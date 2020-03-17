@@ -176,3 +176,7 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
+" Add copy and paste from system clipboard
+vnoremap <C-c> :w !pbcopy<CR><CR>
+noremap <C-v> :r !pbpaste<CR>
+
