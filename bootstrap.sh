@@ -4,7 +4,7 @@
 # Command to download and execute bootstrap.sh script
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/luojxxx/dotfiles/master/bootstrap.sh)"
 
-PACKAGES="gcc git tmux tldr tree nnn ripgrep fzf ack rsync htop python3 pipenv node yarn prettier eslint yapf flake8"
+PACKAGES="gcc git tmux tldr shellcheck tree nnn ripgrep fzf ack rsync htop python3 pipenv node yarn prettier eslint yapf flake8"
 IFS=' ' read -r -a pkgs <<< "$PACKAGES"
 
 # Install homebrew
@@ -56,4 +56,4 @@ mkdir ~/.vim/ftplugin
 echo "let b:ale_fixers = ['prettier', 'eslint']" > ~/.vim/ftplugin/javascript.vim
 echo "let b:ale_fixers = ['prettier']" > ~/.vim/ftplugin/json.vim
 echo "let b:ale_fixers = ['yapf', 'flake8']" > ~/.vim/ftplugin/python.vim
-
+echo "let b:ale_fixers = ['shellcheck']" > ~/.vim/ftplugin/sh.vim
