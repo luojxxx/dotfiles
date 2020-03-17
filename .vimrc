@@ -28,10 +28,19 @@ Plugin 'godlygeek/tabular'
 
 Plugin 'dense-analysis/ale'
 
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'isruslan/vim-es6'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'othree/html5.vim'
+Plugin 'hdima/python-syntax'
+Plugin 'kien/rainbow_parentheses.vim'
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'mhartington/oceanic-next'
+Plugin 'joshdick/onedark.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,6 +70,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=grey     ctermbg=236
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black    ctermbg=235
 let g:indent_guides_guide_size = 0
 
+" Rainbow brackets
+let g:rainbow_active = 1
+
 " Oceanic-next 
 " for vim 7
  set t_Co=256
@@ -69,6 +81,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 colorscheme OceanicNext
+"colorscheme onedark
 
 "====================="
 "=== Customization ==="
