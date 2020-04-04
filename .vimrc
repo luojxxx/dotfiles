@@ -178,5 +178,25 @@ set tabstop=2
 
 " Add copy and paste from system clipboard
 vnoremap <C-c> :w !pbcopy<CR><CR>
-noremap <C-v> :r !pbpaste<CR>
+nnoremap <C-v> :r !pbpaste<CR>
+
+" Set leader to space bar
+let mapleader=" " 
+
+" Flip j and k
+nnoremap j k
+nnoremap k j
+vnoremap j k
+vnoremap k j
+
+" Modify page movement
+nnoremap <C-j> <C-u>
+nnoremap <C-k> <C-d>
+nnoremap <C-h> <C-y>
+nnoremap <C-l> <C-e>
+
+vnoremap <C-j> <C-u>
+vnoremap <C-k> <C-d>
+vnoremap <C-h> <C-y>
+vnoremap <C-l> <C-e>
 
