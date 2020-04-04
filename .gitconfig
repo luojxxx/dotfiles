@@ -2,7 +2,8 @@
 	name = luojxxx
 	email = luojxxx@users.noreply.github.com
 [alias]
-  graph = "log --all --graph --decorate --oneline"
+  graph = "log --graph --decorate --oneline --all"
+  shortgraph = "log --graph --decorate --oneline -n 10"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
